@@ -7,7 +7,7 @@ RUN pip install uwsgi
 RUN apt-get install -y curl
 RUN apt-get install -y nginx
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-ADD sample.py /mnt/app/
+ADD sampleapp /mnt/app/sampleapp
 ADD supervisord.conf /mnt/app/
 ADD deneme_nginx.conf /mnt/app/
 WORKDIR /mnt/app
